@@ -165,13 +165,7 @@ class Data:
                         #raise IndexError('while reading %s' % data)
                         print 'Error while reading: %s' % data #Just ignore that line
                         continue
-                # Try to convert ids to int
-                try:
-                    row_id = int(row_id)
-                except: pass
-                try:
-                    col_id = int(col_id)
-                except: pass
+                
                 # Add tuple
                 try:
                     self.add_tuple((float(value), row_id, col_id))
